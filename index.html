@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Clock</title>
+    <style>
+      .flex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .clock {
+        font-weight: bold;
+        font-size: 3rem;
+      }
+
+      .hour {
+        color: dodgerblue;
+      }
+
+      .minute {
+        color: green;
+      }
+
+      .second {
+        color: red;
+      }
+
+      #now-what {
+        color: red
+        ;font-size: 2rem;
+        font-weight: bold;
+        font-style: italic;
+        text-shadow: 0 0 5px yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex">
+      <h1>JavaScript Clock</h1>
+      <div class="clock">
+        <span class="hour">Hour</span>:<span class="minute">Minute</span>:<span
+          class="second"
+          >Second</span
+        > <span class="ampm">AMPM</span>
+      </div>
+
+      <!-- Time mangement -->
+      <div class="">
+        <p id="now-what">Select an Option</p>
+      </div>
+
+      <div class="select-box">
+        <h2>Work Time Selector</h2>
+        <select name="work" id="wakeUpTimeSelector">
+          <option value="-1">Select an option</option>
+          <option value="6">6AM - 12AM</option>
+          <option value="12">12PM - 6PM</option>
+          <option value="18">6PM - 12AM</option>
+          <option value="0">12AM - 6AM</option>
+        </select>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
