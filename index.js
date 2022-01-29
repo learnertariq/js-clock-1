@@ -3,8 +3,8 @@ const hourDisplay = document.getElementsByClassName("hour")[0];
 const minuteDisplay = document.getElementsByClassName("minute")[0];
 const secondDisplay = document.getElementsByClassName("second")[0];
 const ampmDisplay = document.getElementsByClassName("ampm")[0];
-const nowWhatDisplay = document.getElementById("now-what");
-const wakeUpTimeSelector = document.getElementById("wakeUpTimeSelector");
+// const nowWhatDisplay = document.getElementById("now-what");
+// const wakeUpTimeSelector = document.getElementById("wakeUpTimeSelector");
 
 function updateClock() {
   const now = new Date();
@@ -55,21 +55,20 @@ setInterval(() => {
   updateClock();
 }, 1000);
 
-wakeUpTimeSelector.addEventListener("change", () => {
-  const hour = new Date().getHours();
+// wakeUpTimeSelector.addEventListener("change", () => {
+//   const hour = new Date().getHours();
 
-  let selectedTime = wakeUpTimeSelector.value;
+//   let selectedTime = wakeUpTimeSelector.value;
 
-  if (selectedTime == 0 && ((hour) => 0 && hour < 6)) {
-    nowWhatDisplay.innerText = "Shala Ghuma";
-  } else if (selectedTime == 6 && ((hour) => 6 && hour < 12)) {
-    nowWhatDisplay.innerText = "Shala Bajare giye Kena kata kor";
-  } else if (selectedTime == 12 && ((hour) => 12 && hour < 18)) {
-    nowWhatDisplay.innerText = "Khela korte jabi ki na bol";
-  } else if (selectedTime == 18 && ((hour) => 18 && hour <= 23)) {
-    nowWhatDisplay.innerText = "Boi niye boi, na hole khobor ache";
-  } else if (selectedTime == -1 ) {
-    nowWhatDisplay.innerText = "Select an Option";
-  }
-
-});
+//   if (selectedTime == 0 && hour >= 0 && hour < 6) {
+//     nowWhatDisplay.innerText = "Shala Ghuma";
+//   } else if (selectedTime == 6 && hour >= 6 && hour < 12) {
+//     nowWhatDisplay.innerText = "Shala Bajare giye Kena kata kor";
+//   } else if (selectedTime == 12 && hour >= 12 && hour < 18) {
+//     nowWhatDisplay.innerText = "Khela korte jabi ki na bol";
+//   } else if (selectedTime == 18 && hour >= 18 && hour <= 23) {
+//     nowWhatDisplay.innerText = "Boi niye boi, na hole khobor ache";
+//   } else if (selectedTime == -1) {
+//     nowWhatDisplay.innerText = "Select an Option";
+//   }
+// });
